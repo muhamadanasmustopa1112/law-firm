@@ -1,0 +1,31 @@
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+.fade-out-left {
+  animation: fadeOutLeft 1s forwards;
+}
+
+.fade-out-right {
+  animation: fadeOutRight 1s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOutLeft {
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes fadeOutRight {
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
