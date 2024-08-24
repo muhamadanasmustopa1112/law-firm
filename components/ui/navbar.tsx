@@ -12,7 +12,7 @@ const links = [
   },
   {
     name: "legal ai",
-    path: "/services/consulting",
+    path: "/legal-ai",
   },
   {
     name: "insight",

@@ -1,10 +1,22 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 function MainHome() {
   const [trigger, setTrigger] = useState(false);
   const [showSecondComponent, setShowSecondComponent] = useState(false);
+
+  // Disable page scroll when showing the second component
+  useEffect(() => {
+    if (trigger && showSecondComponent) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [trigger, showSecondComponent]);
 
   const leftExitVariants = {
     hidden: { x: -200, opacity: 0, transition: { duration: 0.8, delay: 0.3 } },
@@ -30,12 +42,6 @@ function MainHome() {
     exit: { y: 200, opacity: 0, transition: { duration: 0.8 } },
   };
 
-  const topExitVariants = {
-    hidden: { y: -200, opacity: 0, transition: { duration: 0.8, delay: 0.3 } },
-    initial: { y: 0, opacity: 1 },
-    exit: { y: -200, opacity: 0, transition: { duration: 0.8 } },
-  };
-
   const LIST = [
     "Penal Law",
     "Family Law",
@@ -46,9 +52,9 @@ function MainHome() {
     "International Law",
     "Intelectual Property / Patent Law",
     "Tech Law",
-    " Mergers & Acquisitions Stock Market Law",
-    "Sovereign Wealth fund",
-    "Hedge fund",
+    "Mergers & Acquisitions Stock Market Law",
+    "Sovereign Wealth Fund",
+    "Hedge Fund",
     "Private Equity",
     "Investor Relations",
     "Prime Brokerage",
@@ -69,7 +75,7 @@ function MainHome() {
   };
 
   return (
-    <main className="relative bg-black text-white min-h-[80vh] flex flex-col justify-center items-start bg-no-repeat bg-cover bg-right-bottom z-10 before:content-[''] before:absolute before:w-full before:h-full before:block before:bg-gradient-to-b before:from-transparent before:from-60% before:to-black before:to-95% before:-z-10 before:top-0 before:left-0">
+    <main className="relative bg-black text-white min-h-[90vh] flex flex-col justify-center items-start bg-no-repeat bg-cover bg-right-bottom z-10 before:content-[''] before:absolute before:w-full before:h-full before:block before:bg-gradient-to-b before:from-transparent before:from-60% before:to-black before:to-95% before:-z-10 before:top-0 before:left-0">
       <AnimatePresence>
         {!trigger && !showSecondComponent && (
           <motion.div
@@ -92,7 +98,7 @@ function MainHome() {
                 of one's own right
               </h2>
               <button
-                className="rounded-full uppercase bg-white text-gray-900 text-center py-3 px-6 text-sm font-medium mt-2"
+                className="rounded-full uppercase bg-white text-gray-900 text-center py-3 px-6 text-sm font-medium mt-6"
                 onClick={handleTriggerClick}
               >
                 Capabilities
@@ -103,7 +109,7 @@ function MainHome() {
               animate="initial"
               exit="exit"
               variants={rightExitVariants}
-              style={{ position: "relative", width: "50%" }}
+              style={{ position: "relative", width: "54%" }}
             >
               <img
                 src="/img/IURIS-Estatua-de-David.png"
@@ -112,7 +118,7 @@ function MainHome() {
                 style={{
                   right: "0",
                   top: "50%",
-                  height: "730px",
+                  height: "820px",
                   transform: "translateY(-50%)",
                 }}
               />
@@ -136,18 +142,18 @@ function MainHome() {
               animate="visible"
               exit="exit"
               variants={leftEnterVariants}
-              className="flex w-1/2 flex-col items-start h-[600px] gap-12 pl-32"
+              className="flex w-1/2 flex-col items-start h-[400px] gap-16 pl-32"
             >
               <button
-                className="rounded-full uppercase w-32 bg-transparent text-left py-2 text-sm font-bold tracking-[10px]"
+                className="rounded-full uppercase bg-transparent text-left py-2 text-lg font-bold tracking-[10px]"
                 onClick={handleBackClick}
               >
                 &larr; Back
               </button>
-              <h1 className="text-[8rem] italic font-serif leading-[125px] ">
+              <h1 className="text-[9rem] italic font-serif leading-[125px] ">
                 Areas <br /> of Law
               </h1>
-              <button className="rounded-full uppercase w-32 bg-white text-gray-900 text-center py-2 text-sm font-medium">
+              <button className="rounded-full uppercase bg-white text-gray-900 text-center py-2 px-8 text-lg font-medium">
                 Consult
               </button>
             </motion.div>
@@ -156,14 +162,20 @@ function MainHome() {
               animate="visible"
               exit="exit"
               variants={bottomEnterVariants}
-              className="w-1/2"
+              className="w-1/2 h-[calc(10*4rem)] overflow-y-auto custom-scrollbar"
             >
               <div
-                className="flex flex-col gap-1 overflow-y-auto h-full"
-                style={{ height: "calc(9 * 4rem)", scrollbarWidth: "none" }}
+                className="flex flex-col gap-1 h-full"
+                // style={{
+                //   scrollbarWidth: "none",
+                //   WebkitOverflowScrolling: "touch",
+                // }}
               >
                 {LIST.map((val) => (
-                  <span key={val} className="text-4xl font-thin">
+                  <span
+                    key={val}
+                    className="text-6xl leading-tight font-thin pr-4"
+                  >
                     {val}
                   </span>
                 ))}

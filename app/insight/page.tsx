@@ -7,7 +7,7 @@ export default function Page() {
           <h2 className="font-semibold text-3xl">Insights from our team</h2>
           <span>Unlock legal Insights That Empower Your Decisions</span>
         </div>
-        <div className="bg-gray-600 relative rounded-full px-3 py-1 w-[400px] border-white border-2">
+        <div className="bg-gray-600 relative rounded-full px-3 py-3 w-[400px] border-white border-2">
           <input
             className="pl-6 bg-transparent w-full focus:outline-0"
             placeholder="search..."
