@@ -8,7 +8,7 @@ function Footer() {
     <footer
       className={
         sourceSansPro.className +
-        " py-8 px-24 flex flex-row justify-between gap-36 bg-black border-t border-white"
+        " py-16 px-24 flex flex-row justify-between gap-36 bg-black border-t border-white text-white "
       }
     >
       <div className="flex flex-col gap-8 w-1/3">
@@ -17,10 +17,10 @@ function Footer() {
             className="w-32 h-14 object-contain"
             alt="IURIS International Indonesia"
             src="/img/logo.webp"
-            width={252}
-            height={110}
+            width={200}
+            height={80}
           />
-          <div className="flex gap-4 text-2xl">
+          <div className="flex gap-4 text-xl">
             <Link
               target="_blank"
               href="https://www.instagram.com/iurisinternational"
@@ -141,7 +141,7 @@ function Footer() {
               </svg>
             </Link>
           </div>
-          <p>
+          <p className="text-sm">
             ©2024 IURIS LLC. PT IURIS INTERNATIONAL INDONESIA.
             <br />
             PTY IURIS. All rights reserved.
@@ -150,30 +150,34 @@ function Footer() {
       </div>
       <div className="flex-grow flex flex-row justify-evenly gap-14">
         <div className="flex flex-col gap-4">
-          <Link target="_blank" href="/whitepaper.pdf" className="text-xl">
+          <Link
+            target="_blank"
+            href="/whitepaper.pdf"
+            className="text-sm lg:text-lg"
+          >
             Disclaimer
           </Link>
           <Link
             target="_blank"
             href="https://www.loker.id/profile/pt-iuris-international-indonesia"
-            className="text-xl"
+            className="text-sm lg:text-lg"
           >
             Careers
           </Link>
         </div>
         <div className="flex flex-col gap-4">
-          <Link href="/privacy-policy" className="text-xl">
+          <Link href="/privacy-policy" className="text-sm lg:text-lg">
             Privacy Policy
           </Link>
-          <Link href="/terms-of-use" className="text-xl">
+          <Link href="/terms-of-use" className="text-sm lg:text-lg">
             IURIS Internasional Consulting Firm
           </Link>
         </div>
         <div className="flex flex-col gap-4">
-          <Link href="/terms-of-use" className="text-xl">
+          <Link href="/terms-of-use" className="text-sm lg:text-lg">
             Terms Of Use
           </Link>
-          <Link href="/terms-of-use" className="text-xl">
+          <Link href="/terms-of-use" className="text-sm lg:text-lg">
             IURIS United States Law Firm
           </Link>
         </div>

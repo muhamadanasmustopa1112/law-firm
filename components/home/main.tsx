@@ -69,7 +69,7 @@ function MainHome() {
   };
 
   return (
-    <main className="min-h-[80vh] flex flex-col justify-center items-start px-32 bg-no-repeat bg-cover bg-right-bottom relative z-10 before:content-[''] before:absolute before:w-full before:h-full before:block before:bg-gradient-to-b before:from-transparent before:from-60% before:to-black before:to-95% before:-z-10 before:top-0 before:left-0">
+    <main className="relative bg-black text-white min-h-[80vh] flex flex-col justify-center items-start bg-no-repeat bg-cover bg-right-bottom z-10 before:content-[''] before:absolute before:w-full before:h-full before:block before:bg-gradient-to-b before:from-transparent before:from-60% before:to-black before:to-95% before:-z-10 before:top-0 before:left-0">
       <AnimatePresence>
         {!trigger && !showSecondComponent && (
           <motion.div
@@ -85,14 +85,14 @@ function MainHome() {
               animate="initial"
               exit="exit"
               variants={leftExitVariants}
-              className="flex gap-3 flex-col items-start"
+              className="flex gap-3 flex-col items-start pl-24"
             >
-              <h1 className="text-[10rem] leading-[6rem]">IURIS</h1>
-              <h2 className="text-[6rem] italic font-serif text-left md:tracking-[3px] tracking-[7px]">
+              <h1 className="text-[8rem] leading-none">IURIS</h1>
+              <h2 className="text-[4rem] italic font-serif text-left leading-none">
                 of one's own right
               </h2>
               <button
-                className="rounded-full uppercase w-32 bg-white text-gray-900 text-center py-2 text-sm font-medium mt-2"
+                className="rounded-full uppercase bg-white text-gray-900 text-center py-3 px-6 text-sm font-medium mt-2"
                 onClick={handleTriggerClick}
               >
                 Capabilities
@@ -103,11 +103,18 @@ function MainHome() {
               animate="initial"
               exit="exit"
               variants={rightExitVariants}
+              style={{ position: "relative", width: "50%" }}
             >
               <img
                 src="/img/IURIS-Estatua-de-David.png"
                 alt="Statue"
-                className="h-[1000px] w-auto"
+                className="absolute right-0"
+                style={{
+                  right: "0",
+                  top: "50%",
+                  height: "730px",
+                  transform: "translateY(-50%)",
+                }}
               />
             </motion.div>
           </motion.div>
@@ -129,7 +136,7 @@ function MainHome() {
               animate="visible"
               exit="exit"
               variants={leftEnterVariants}
-              className="flex  w-1/2 flex-col items-start h-[600px] gap-24"
+              className="flex w-1/2 flex-col items-start h-[600px] gap-12 pl-32"
             >
               <button
                 className="rounded-full uppercase w-32 bg-transparent text-left py-2 text-sm font-bold tracking-[10px]"
@@ -137,7 +144,7 @@ function MainHome() {
               >
                 &larr; Back
               </button>
-              <h1 className="text-[10rem] italic font-serif leading-[145px] ">
+              <h1 className="text-[8rem] italic font-serif leading-[125px] ">
                 Areas <br /> of Law
               </h1>
               <button className="rounded-full uppercase w-32 bg-white text-gray-900 text-center py-2 text-sm font-medium">
@@ -151,9 +158,12 @@ function MainHome() {
               variants={bottomEnterVariants}
               className="w-1/2"
             >
-              <div className="flex flex-col gap-1 overflow-y-auto h-full">
+              <div
+                className="flex flex-col gap-1 overflow-y-auto h-full"
+                style={{ height: "calc(9 * 4rem)", scrollbarWidth: "none" }}
+              >
                 {LIST.map((val) => (
-                  <span key={val} className="text-6xl font-thin">
+                  <span key={val} className="text-4xl font-thin">
                     {val}
                   </span>
                 ))}

@@ -5,45 +5,42 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
+const links = [
+  {
+    name: "the firm",
+    path: "/",
+  },
+  {
+    name: "legal ai",
+    path: "/services/consulting",
+  },
+  {
+    name: "insight",
+    path: "/insight",
+  },
+  {
+    name: "consult",
+    path: "/consult",
+  },
+];
+
 function Navbar() {
   const pathname = usePathname();
-  const links = [
-    {
-      name: "the firm",
-      path: "/",
-    },
-    {
-      name: "legal ai",
-      path: "/services/consulting",
-    },
-    {
-      name: "insight",
-      path: "/insight",
-    },
-    {
-      name: "consult",
-      path: "/contact",
-    },
-  ];
   return (
-    <nav
-      className="w-screen sticky top-0 p-6 z-50 backdrop-blur-md"
-      style={{
-        boxShadow: "2px 0px 5px rgb(0 0 0 / 0.4)",
-        backgroundColor: "rgb(0 0 0 / 0.6)",
-      }}
-    >
+    <nav className="w-screen sticky top-0 p-6 z-50 backdrop-blur-md bg-black text-white">
       <div className="flex items-center justify-between ">
         <div>
-          <Image
-            className="w-32 h-14 object-contain"
-            alt="IURIS International Indonesia"
-            src="/img/logo.webp"
-            width={252}
-            height={110}
-          />
+          <Link href="/">
+            <Image
+              className="w-28 h-12 object-contain"
+              alt="IURIS International Indonesia"
+              src="/img/logo.webp"
+              width={252}
+              height={110}
+            />
+          </Link>
         </div>
-        <div className="flex justify-evenly gap-2 text-center border border-white rounded-full px-4 py-2 text-base">
+        <div className="flex justify-evenly gap-2 text-center border border-white rounded-full px-4 py-2 text-sm">
           {links.map((item) => (
             <Link
               key={item.name}
@@ -65,7 +62,7 @@ function Navbar() {
         </div>
         <Link
           href="/about-us"
-          className="bg-grey uppercase text-white rounded-full py-4 px-6 hover:brightness-90 transition-all"
+          className="bg-white uppercase text-sm text-black rounded-full py-4 px-6 hover:brightness-90 transition-all"
         >
           About Us
         </Link>

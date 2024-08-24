@@ -1,8 +1,6 @@
-import React from "react";
-
-const page = () => {
+export default function Page() {
   return (
-    <div className="flex flex-col p-8 mx-20 h-full">
+    <div className="flex flex-col p-8 mx-20 h-full bg-black text-white">
       {/* Title */}
       <div className="flex justify-between items-center">
         <div className="flex flex-col gap-3 items-starts">
@@ -39,6 +37,4 @@ const page = () => {
       </div>
     </div>
   );
-};
-
-export default page;
+}

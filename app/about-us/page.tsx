@@ -1,10 +1,6 @@
-import OurTeam from "@/components/about-us/our-team";
-import sourceSansPro from "@/components/ui/sourceSansPro";
-import React from "react";
-
-const page = () => {
+export default function Page() {
   return (
-    <div className="h-[80vh] w-screen">
+    <div className="h-[80vh] w-screen bg-black/85 text-white">
       <div className="container mx-auto h-full">
         <div className="flex items-center flex-nowrap h-full">
           <div className="w-1/2">
@@ -56,6 +52,4 @@ const page = () => {
       </div>
     </div>
   );
-};
-
-export default page;
+}
