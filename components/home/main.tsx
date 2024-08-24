@@ -114,13 +114,7 @@ function MainHome() {
               <img
                 src="/img/IURIS-Estatua-de-David.png"
                 alt="Statue"
-                className="absolute right-0"
-                style={{
-                  right: "0",
-                  top: "50%",
-                  height: "820px",
-                  transform: "translateY(-50%)",
-                }}
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 h-auto w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-[46rem]"
               />
             </motion.div>
           </motion.div>
