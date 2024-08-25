@@ -5,48 +5,48 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 const assets = [
-  {
-    name: "Cars",
-    path: "cars",
-    children: <Cars />,
-  },
-  {
-    name: "Motorcycles",
-    path: "motorcycles",
-    children: <Motorcycles />,
-  },
+  // {
+  //   name: "Cars",
+  //   path: "cars",
+  //   children: <Cars />,
+  // },
+  // {
+  //   name: "Motorcycles",
+  //   path: "motorcycles",
+  //   children: <Motorcycles />,
+  // },
   {
     name: "Properties",
     path: "properties",
     children: <Properties />,
   },
-  {
-    name: "Planes",
-    path: "planes",
-    children: (
-      <div className="h-[30rem] flex justify-center items-center">
-        <h2 className="text-4xl font-semibold text-center">Coming Soon</h2>
-      </div>
-    ),
-  },
-  {
-    name: "Helicopters",
-    path: "helicopters",
-    children: (
-      <div className="h-[30rem] flex justify-center items-center">
-        <h2 className="text-4xl font-semibold text-center">Coming Soon</h2>
-      </div>
-    ),
-  },
-  {
-    name: "Yachts",
-    path: "yachts",
-    children: (
-      <div className="h-[30rem] flex justify-center items-center">
-        <h2 className="text-4xl font-semibold text-center">Coming Soon</h2>
-      </div>
-    ),
-  },
+  // {
+  //   name: "Planes",
+  //   path: "planes",
+  //   children: (
+  //     <div className="h-[30rem] flex justify-center items-center">
+  //       <h2 className="text-4xl font-semibold text-center">Coming Soon</h2>
+  //     </div>
+  //   ),
+  // },
+  // {
+  //   name: "Helicopters",
+  //   path: "helicopters",
+  //   children: (
+  //     <div className="h-[30rem] flex justify-center items-center">
+  //       <h2 className="text-4xl font-semibold text-center">Coming Soon</h2>
+  //     </div>
+  //   ),
+  // },
+  // {
+  //   name: "Yachts",
+  //   path: "yachts",
+  //   children: (
+  //     <div className="h-[30rem] flex justify-center items-center">
+  //       <h2 className="text-4xl font-semibold text-center">Coming Soon</h2>
+  //     </div>
+  //   ),
+  // },
 ];
 
 export default function Page({ params }: { params: { asset: string } }) {
