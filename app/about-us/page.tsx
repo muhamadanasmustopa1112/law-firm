@@ -26,7 +26,7 @@ export default function Page() {
                     height={24}
                   />
                 </span>
-                <span className="text-sm sm:text-base">iuris@iuris.group</span>
+                <span className="text-sm sm:text-base">info@iuris.world</span>
               </div>
               <div className="flex gap-2 items-center">
                 <span>
@@ -37,7 +37,7 @@ export default function Page() {
                     height={24}
                   />
                 </span>
-                <span className="text-sm sm:text-base">+6285822476880</span>
+                <span className="text-sm sm:text-base">+13147449126</span>
               </div>
               <div className="flex flex-col gap-2 items-center md:items-start text-center md:text-left">
                 <span className="text-sm sm:text-base">

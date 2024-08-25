@@ -12,10 +12,10 @@ function Footer() {
 
   return (
     <footer
-      className={`py-8 px-4 md:px-24 flex flex-col md:flex-row justify-between gap-8 md:gap-36 bg-black border-t border-white text-white`}
+      className={`py-8 lg:py-24 px-4 md:px-24 flex flex-col md:flex-row justify-between gap-8 md:gap-16 bg-black border-t border-white text-white`}
     >
-      <div className="flex flex-col gap-8 w-full md:w-1/3">
-        <div className="flex flex-col items-center md:items-start gap-4">
+      <div className="flex flex-col gap-8 w-full md:w-1/2">
+        <div className="flex flex-col items-center md:items-start gap-8">
           <div className="w-full flex justify-center md:justify-start">
             <Image
               className="w-32 h-14 object-contain "
@@ -25,7 +25,7 @@ function Footer() {
               height={80}
             />
           </div>
-          <div className="flex flex-wrap gap-4 text-xl justify-center md:justify-start">
+          {/* <div className="flex flex-wrap gap-4 text-xl justify-center md:justify-start">
             <Link
               target="_blank"
               href="https://www.instagram.com/iurisinternational"
@@ -145,8 +145,8 @@ function Footer() {
                 <path d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"></path>
               </svg>
             </Link>
-          </div>
-          <p className="text-sm text-center md:text-left">
+          </div> */}
+          <p className="text-sm text-center md:text-left leading-relaxed">
             ©2024 IURIS LLC. PT IURIS INTERNATIONAL INDONESIA.
             <br />
             PTY IURIS. All rights reserved.
@@ -170,40 +170,36 @@ function Footer() {
             <Link
               target="_blank"
               href="/whitepaper.pdf"
-              className="text-sm lg:text-lg"
+              className="text-sm lg:text-sm"
             >
               Disclaimer
             </Link>
             <Link
               target="_blank"
               href="https://www.loker.id/profile/pt-iuris-international-indonesia"
-              className="text-sm lg:text-lg"
+              className="text-sm lg:text-sm"
             >
               Careers
             </Link>
           </div>
           <div className="flex flex-col gap-4">
-            <Link href="/privacy-policy" className="text-sm lg:text-lg">
+            <Link href="/privacy-policy" className="text-sm lg:text-sm">
               Privacy Policy
             </Link>
             <Link
               href="https://iurisinternational.com"
               target="_blank"
-              className="text-sm lg:text-lg"
+              className="text-sm lg:text-sm"
             >
-              IURIS Internasional
-              <br className="hidden lg:block" />
-              Consulting Firm
+              IURIS Internasional Consulting Firm
             </Link>
           </div>
           <div className="flex flex-col gap-4">
-            <Link href="/terms-of-use" className="text-sm lg:text-lg">
+            <Link href="/terms-of-use" className="text-sm lg:text-sm">
               Terms Of Use
             </Link>
-            <Link href="/about-us" className="text-sm lg:text-lg">
-              IURIS United States
-              <br className="hidden lg:block" />
-              Law Firm
+            <Link href="/about-us" className="text-sm lg:text-sm">
+              IURIS United States Law Firm
             </Link>
           </div>
         </div>

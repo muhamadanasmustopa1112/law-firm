@@ -13,7 +13,7 @@ export default function Page() {
               </p>
               <div className="relative">
                 <button className="rounded-full uppercase text-lg font-medium mt-2 inline-flex items-center">
-                  Check Solutions
+                  Request Demo
                   <span className="ml-2">&rarr;</span>
                 </button>
                 <div className="absolute left-0 bottom-0 h-[2px] w-full bg-gray-300"></div>
