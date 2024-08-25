@@ -1,26 +1,31 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import sourceSansPro from "./sourceSansPro";
+import { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 function Footer() {
+  const [isLinksOpen, setIsLinksOpen] = useState(false);
+
+  const toggleLinks = () => setIsLinksOpen(!isLinksOpen);
+
   return (
     <footer
-      className={
-        sourceSansPro.className +
-        " py-16 px-24 flex flex-row justify-between gap-36 bg-black border-t border-white text-white "
-      }
+      className={`py-8 px-4 md:px-24 flex flex-col md:flex-row justify-between gap-8 md:gap-36 bg-black border-t border-white text-white`}
     >
-      <div className="flex flex-col gap-8 w-1/3">
-        <div className="flex flex-col gap-4">
-          <Image
-            className="w-32 h-14 object-contain"
-            alt="IURIS International Indonesia"
-            src="/img/logo.webp"
-            width={200}
-            height={80}
-          />
-          <div className="flex gap-4 text-xl">
+      <div className="flex flex-col gap-8 w-full md:w-1/3">
+        <div className="flex flex-col items-center md:items-start gap-4">
+          <div className="w-full flex justify-center md:justify-start">
+            <Image
+              className="w-32 h-14 object-contain "
+              alt="IURIS International Indonesia"
+              src="/img/logo.webp"
+              width={200}
+              height={80}
+            />
+          </div>
+          <div className="flex flex-wrap gap-4 text-xl justify-center md:justify-start">
             <Link
               target="_blank"
               href="https://www.instagram.com/iurisinternational"
@@ -141,45 +146,66 @@ function Footer() {
               </svg>
             </Link>
           </div>
-          <p className="text-sm">
+          <p className="text-sm text-center md:text-left">
             ©2024 IURIS LLC. PT IURIS INTERNATIONAL INDONESIA.
             <br />
             PTY IURIS. All rights reserved.
           </p>
         </div>
       </div>
-      <div className="flex-grow flex flex-row justify-evenly gap-14">
-        <div className="flex flex-col gap-4">
-          <Link
-            target="_blank"
-            href="/whitepaper.pdf"
-            className="text-sm lg:text-lg"
-          >
-            Disclaimer
-          </Link>
-          <Link
-            target="_blank"
-            href="https://www.loker.id/profile/pt-iuris-international-indonesia"
-            className="text-sm lg:text-lg"
-          >
-            Careers
-          </Link>
-        </div>
-        <div className="flex flex-col gap-4">
-          <Link href="/privacy-policy" className="text-sm lg:text-lg">
-            Privacy Policy
-          </Link>
-          <Link href="/terms-of-use" className="text-sm lg:text-lg">
-            IURIS Internasional Consulting Firm
-          </Link>
-        </div>
-        <div className="flex flex-col gap-4">
-          <Link href="/terms-of-use" className="text-sm lg:text-lg">
-            Terms Of Use
-          </Link>
-          <Link href="/terms-of-use" className="text-sm lg:text-lg">
-            IURIS United States Law Firm
-          </Link>
+      <div className="w-full md:flex-grow md:flex md:flex-row md:justify-evenly md:gap-20">
+        <button
+          className="w-full flex justify-between items-center py-2 border-b border-white md:hidden"
+          onClick={toggleLinks}
+        >
+          Quick Links
+          {isLinksOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+        </button>
+        <div
+          className={`flex flex-col md:flex-row justify-evenly gap-8 md:gap-20 mt-4 md:mt-0 ${
+            isLinksOpen ? "block" : "hidden md:flex"
+          }`}
+        >
+          <div className="flex flex-col gap-4">
+            <Link
+              target="_blank"
+              href="/whitepaper.pdf"
+              className="text-sm lg:text-lg"
+            >
+              Disclaimer
+            </Link>
+            <Link
+              target="_blank"
+              href="https://www.loker.id/profile/pt-iuris-international-indonesia"
+              className="text-sm lg:text-lg"
+            >
+              Careers
+            </Link>
+          </div>
+          <div className="flex flex-col gap-4">
+            <Link href="/privacy-policy" className="text-sm lg:text-lg">
+              Privacy Policy
+            </Link>
+            <Link
+              href="https://iurisinternational.com"
+              target="_blank"
+              className="text-sm lg:text-lg"
+            >
+              IURIS Internasional
+              <br className="hidden lg:block" />
+              Consulting Firm
+            </Link>
+          </div>
+          <div className="flex flex-col gap-4">
+            <Link href="/terms-of-use" className="text-sm lg:text-lg">
+              Terms Of Use
+            </Link>
+            <Link href="/about-us" className="text-sm lg:text-lg">
+              IURIS United States
+              <br className="hidden lg:block" />
+              Law Firm
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

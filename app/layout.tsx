@@ -30,8 +30,8 @@ export function generateMetadata(): Metadata {
       },
     ],
     title: {
-      default: "IURIS International Indonesia | Consulting Firm",
-      template: "%s - IURIS International Indonesia | Consulting Firm",
+      default: "Law Firm | IURIS",
+      template: "%s - Law Firm | IURIS",
     },
     description:
       "Platform that uses human and AI consultants to help you with any consultation task quickly.",
