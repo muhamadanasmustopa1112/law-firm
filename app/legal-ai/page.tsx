@@ -1,12 +1,12 @@
 export default function Page() {
   return (
-    <div className="h-[80vh] w-screen bg-black text-white">
+    <div className="h-[65vh] lg:h-[80vh] w-screen bg-black text-white">
       <div className="container mx-auto h-full">
-        <div className="flex items-center flex-nowrap h-full">
-          <div className="w-1/2"></div>
-          <div className="w-1/2 pr-24">
+        <div className="flex flex-col lg:flex-row items-center flex-nowrap h-full justify-center lg:justify-normal">
+          <div className="hidden lg:block lg:w-1/2"></div>
+          <div className="lg:w-1/2 px-10 lg:px-0 lg:py-10 lg:pr-24">
             <div className="flex flex-col gap-4 items-start">
-              <p className="text-3xl font-semibold leading-snug">
+              <p className="text-xl lg:text-3xl font-semibold leading-snug">
                 Unlock the power of legal AI with our insightful content,
                 guiding you towards informed decisions in the ever-evolving
                 legal landscape.

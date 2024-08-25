@@ -5,8 +5,15 @@ import { motion, AnimatePresence } from "framer-motion";
 function MainHome() {
   const [trigger, setTrigger] = useState(false);
   const [showSecondComponent, setShowSecondComponent] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Disable page scroll when showing the second component
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   useEffect(() => {
     if (trigger && showSecondComponent) {
       document.body.style.overflow = "hidden";
@@ -83,7 +90,7 @@ function MainHome() {
             initial="initial"
             animate="initial"
             exit="exit"
-            className="flex gap-2 w-full justify-between items-center"
+            className="flex flex-col md:flex-row gap-2 w-full justify-between items-center"
             style={{ height: "100%" }}
           >
             <motion.div
@@ -91,10 +98,10 @@ function MainHome() {
               animate="initial"
               exit="exit"
               variants={leftExitVariants}
-              className="flex gap-3 flex-col items-start pl-24"
+              className="flex gap-3 flex-col items-center md:items-start p-4 md:pl-24"
             >
-              <h1 className="text-[8rem] leading-none">IURIS</h1>
-              <h2 className="text-[4rem] italic font-serif text-left leading-none">
+              <h1 className="text-5xl md:text-[8rem] leading-none">IURIS</h1>
+              <h2 className="text-2xl md:text-[4rem] italic font-serif text-center md:text-left leading-none">
                 of one's own right
               </h2>
               <button
@@ -109,12 +116,12 @@ function MainHome() {
               animate="initial"
               exit="exit"
               variants={rightExitVariants}
-              style={{ position: "relative", width: "54%" }}
+              className="w-full md:w-[54%] mt-8 md:mt-0"
             >
               <img
                 src="/img/IURIS-Estatua-de-David.png"
                 alt="Statue"
-                className="absolute right-0 top-1/2 transform -translate-y-1/2 h-auto w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-[46rem]"
+                className="mx-auto md:absolute md:right-0 md:top-1/2 md:transform md:-translate-y-1/2 h-auto w-full max-w-xs md:max-w-sm lg:max-w-md xl:max-w-[46rem]"
               />
             </motion.div>
           </motion.div>
@@ -128,7 +135,7 @@ function MainHome() {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="flex gap-2 w-full justify-between items-center"
+            className="flex flex-col md:flex-row gap-2 w-full justify-between items-center"
             style={{ height: "100%" }}
           >
             <motion.div
@@ -136,18 +143,18 @@ function MainHome() {
               animate="visible"
               exit="exit"
               variants={leftEnterVariants}
-              className="flex w-1/2 flex-col items-start h-[400px] gap-16 pl-32"
+              className="flex w-full md:w-1/2 flex-col items-start h-auto md:h-[400px] gap-8 md:gap-16 p-4 md:pl-32"
             >
               <button
-                className="rounded-full uppercase bg-transparent text-left py-2 text-lg font-bold tracking-[10px]"
+                className="rounded-full uppercase bg-transparent text-left py-2 text-base md:text-lg font-bold tracking-[5px] md:tracking-[10px]"
                 onClick={handleBackClick}
               >
                 &larr; Back
               </button>
-              <h1 className="text-[9rem] italic font-serif leading-[125px] ">
+              <h1 className="text-5xl md:text-[9rem] italic font-serif leading-tight md:leading-[125px]">
                 Areas <br /> of Law
               </h1>
-              <button className="rounded-full uppercase bg-white text-gray-900 text-center py-2 px-8 text-lg font-medium">
+              <button className="rounded-full uppercase bg-white text-gray-900 text-center py-2 px-6 md:px-8 text-base md:text-lg font-medium">
                 Consult
               </button>
             </motion.div>
@@ -156,19 +163,13 @@ function MainHome() {
               animate="visible"
               exit="exit"
               variants={bottomEnterVariants}
-              className="w-1/2 h-[calc(10*4rem)] overflow-y-auto custom-scrollbar"
+              className="w-full md:w-1/2 h-[50vh] md:h-[calc(10*4rem)] overflow-y-auto custom-scrollbar mt-8 md:mt-0"
             >
-              <div
-                className="flex flex-col gap-1 h-full"
-                // style={{
-                //   scrollbarWidth: "none",
-                //   WebkitOverflowScrolling: "touch",
-                // }}
-              >
+              <div className="flex flex-col gap-1 h-full">
                 {LIST.map((val) => (
                   <span
                     key={val}
-                    className="text-6xl leading-tight font-thin pr-4"
+                    className="text-3xl md:text-6xl leading-tight font-thin pr-4"
                   >
                     {val}
                   </span>
