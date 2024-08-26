@@ -57,15 +57,15 @@ export default function Page() {
               Contact Us <br className="hidden lg:block" /> Collaborate for
               Progress
             </h1>
-            <p className="text-sm sm:text-base leading-relaxed">
+            {/* <p className="text-sm sm:text-base leading-relaxed">
               We appreciate your interest in connecting with us. For individuals
               of discerning taste and elevated aspirations, we understand the
               importance of refined communication. Please utilize the form below
               to convey your inquiries, and rest assured, our dedicated team is
               committed to providing you with the prompt and discreet attention
               that befits your status.
-            </p>
-            <button className="bg-white text-black hover:bg-white/80 transition-colors py-3 sm:py-4 px-6 sm:px-8 rounded-full text-sm sm:text-base">
+            </p> */}
+            <button className="bg-white text-black hover:bg-white/80 transition-colors py-3 sm:py-4 px-2 sm:px-8 rounded-full text-sm sm:text-base">
               Consult with us
             </button>
           </div>
@@ -73,7 +73,7 @@ export default function Page() {
           <div className="space-y-8">
             <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 sm:p-6 shadow-lg">
               <h2 className="text-xl sm:text-2xl font-semibold mb-4">
-                Our Locations
+                Locations
               </h2>
               <LocationCards />
             </div>
