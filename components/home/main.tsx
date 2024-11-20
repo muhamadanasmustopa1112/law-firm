@@ -121,7 +121,7 @@ function MainHome() {
               <img
                 src="/img/IURIS-Estatua-de-David.png"
                 alt="Statue"
-                className="mx-auto md:absolute md:right-0 md:top-1/2 md:transform md:-translate-y-1/2 h-auto w-full max-w-xs md:max-w-sm lg:max-w-md xl:max-w-[46rem]"
+                className="mx-auto md:absolute md:right-0 md:top-1/2 md:transform md:-translate-y-1/2 h-auto w-full max-w-xs md:max-w-sm lg:max-w-md xl:max-w-[40rem] max-h-[90vh] md:max-h-[85vh]"
               />
             </motion.div>
           </motion.div>

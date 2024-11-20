@@ -12,6 +12,7 @@ const links = [
   { name: "assets", path: "/assets/properties" },
   { name: "insight", path: "/insight" },
   { name: "consult", path: "/consult" },
+  { name: "carrers", path: "/carrers" },
 ];
 
 export default function Navbar() {

@@ -5,42 +5,42 @@ import PropertyListing from "./property/listing";
 const Properties = () => {
   const propertyListing = [
     {
-      name: "DI House - Dian Istana, Surabaya",
+      name: "Los Angeles",
       floor: "-",
       furnishing: "-",
       postedOn: "May 10, 2024",
       image: "/img/properties/property1.webp",
     },
     {
-      name: "KC House - PIK 2, Jakarta",
+      name: "San Francisco",
       floor: "-",
       furnishing: "-",
       postedOn: "May 10, 2024",
       image: "/img/properties/property2.webp",
     },
     {
-      name: "YW House - Brunei",
+      name: "Arizona",
       floor: "-",
       furnishing: "-",
       postedOn: "May 10, 2024",
       image: "/img/properties/property3.webp",
     },
     {
-      name: "YW House Backyard - Brunei",
+      name: "Colorado",
       floor: "-",
       furnishing: "-",
       postedOn: "May 10, 2024",
       image: "/img/properties/property4.webp",
     },
     {
-      name: "HL House - Sunter, Jakarta",
+      name: "Florida",
       floor: "-",
       furnishing: "-",
       postedOn: "May 10, 2024",
       image: "/img/properties/property5.webp",
     },
     {
-      name: "TI House - Surabaya",
+      name: "Texas",
       floor: "-",
       furnishing: "-",
       postedOn: "May 10, 2024",
@@ -49,6 +49,14 @@ const Properties = () => {
   ];
   return (
     <>
+      <h2 className='font-semibold text-4xl text-center relative before:content-[""] before:w-36 before:absolute before:-bottom-4 before:h-[2px] before:bg-white before:left-1/2 before:-translate-x-1/2'>
+        Current Listing
+      </h2>
+      <div className="grid grid-cols-3 gap-6 mt-4 justify-center px-0 lg:px-16 py-0 lg:py-8">
+        {propertyListing.map((item) => (
+          <PropertyListing item={item} key={item.name} />
+        ))}
+      </div>
       <div className='w-screen bg-[url("/img/property.jpg")] aspect-[5/1] bg-no-repeat bg-bottom bg-cover relative -left-8'>
         <div className='max-sm:hidden absolute -z-10 h-[300%] w-auto aspect-square top-1/2 -translate-y-1/2 right-0 before:relative before:-z-10 before:content-[""] before:block before:bg-white before:h-[90%] before:w-[90%] before:rounded-full before:blur-3xl before:bg-opacity-10 before:-right-2/3 before:top-1/2 before:-translate-y-1/2'></div>
       </div>
@@ -77,14 +85,6 @@ const Properties = () => {
             showcasing a commitment to excellence in every project.
           </p>
         </div>
-      </div>
-      <h2 className='font-semibold text-4xl text-center relative before:content-[""] before:w-36 before:absolute before:-bottom-4 before:h-[2px] before:bg-white before:left-1/2 before:-translate-x-1/2'>
-        Current Listing
-      </h2>
-      <div className="grid grid-cols-3 gap-6 mt-4 justify-center px-0 lg:px-16 py-0 lg:py-8">
-        {propertyListing.map((item) => (
-          <PropertyListing item={item} key={item.name} />
-        ))}
       </div>
     </>
   );

@@ -1,57 +1,82 @@
+"use client";
 import React from "react";
+import dynamic from "next/dynamic";
+import "leaflet/dist/leaflet.css";
+import Link from "next/link";
+
+const Map = dynamic(() => import("../../components/about-us/Map"), { ssr: false });
 
 export default function Page() {
   return (
-    <div className="min-h-screen w-full bg-black/85 text-white py-8 md:py-0 flex items-center">
-      <div className="container mx-auto px-4 md:px-0">
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between gap-8 md:gap-0">
-          <div className="w-full md:w-1/2 text-center md:text-left">
-            <h2 className="uppercase text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
-              About Us
-            </h2>
-            <span className="mt-2 block text-sm sm:text-base">
-              We provide personalized legal solutions with a commitment to
-              excellence. Trust us to navigate your legal matters with expert
-              and dedication
+    <div className="min-h-screen w-full bg-black/80 text-white py-16 md:py-20 flex flex-col items-center">
+      {/* Bagian Header */}
+      <div className="container mx-auto px-4 md:px-8 mb-12 text-center">
+        <h2 className="uppercase text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-500">
+          <Link href="/about" passHref>
+            <span className="hover:underline cursor-pointer">
+              IURIS United States Law Firm
             </span>
-          </div>
-          <div className="w-full md:w-1/2 flex justify-center md:justify-start">
-            <div className="flex flex-col gap-6 items-center md:items-start">
-              <div className="flex gap-2 items-center">
-                <span>
-                  <img
-                    src="/icons/icon-email.svg"
-                    alt="email"
-                    width={24}
-                    height={24}
-                  />
-                </span>
-                <span className="text-sm sm:text-base">info@iuris.world</span>
-              </div>
-              <div className="flex gap-2 items-center">
-                <span>
-                  <img
-                    src="/icons/icon-phone.svg"
-                    alt="phone"
-                    width={24}
-                    height={24}
-                  />
-                </span>
-                <span className="text-sm sm:text-base">+13147449126</span>
-              </div>
-              <div className="flex flex-col gap-2 items-center md:items-start text-center md:text-left">
-                <span className="text-sm sm:text-base">
-                  Ready to discuss your case? Contact us today to schedule a
-                  consultation and take the first step toward resolutions.
-                </span>
+          </Link>
+        </h2>
+        <p className="text-lg sm:text-xl mb-6 max-w-3xl mx-auto">
+          We provide personalized legal solutions across the United States. Contact us to discuss your case and find the best resolution.
+        </p>
+      </div>
 
-                <button className="rounded-full uppercase w-32 bg-white text-gray-900 text-center py-2 text-xs sm:text-sm font-medium mt-2 hover:bg-gray-200 transition-colors duration-300">
-                  contact us
-                </button>
-              </div>
-            </div>
+      {/* Daftar Kantor */}
+      <div className="container mx-auto px-4 md:px-8 mb-16">
+        <h3 className="text-center text-3xl sm:text-4xl font-semibold mb-6">Our Offices (Coming Soon)</h3>
+
+        {/* Daftar kantor dengan styling border modern */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          {/* Arizona */}
+          <div className="rounded-lg p-6 shadow-lg border-2 border-gray-800 bg-gradient-to-r from-gray-900 to-gray-800">
+            <h4 className="text-xl font-semibold text-white mb-2">Arizona</h4>
+            <p className="text-sm sm:text-base text-gray-300">
+              4600 East Washington, Phoenix, AZ, 85034
+            </p>
+          </div>
+
+          {/* Utah */}
+          <div className="rounded-lg p-6 shadow-lg border-2 border-gray-800 bg-gradient-to-r from-gray-900 to-gray-800">
+            <h4 className="text-xl font-semibold text-white mb-2">Utah</h4>
+            <p className="text-sm sm:text-base text-gray-300">
+              3450 Triumph Boulevard Suite 102, Lehi, UT, 84043
+            </p>
+          </div>
+
+          {/* Colorado */}
+          <div className="rounded-lg p-6 shadow-lg border-2 border-gray-800 bg-gradient-to-r from-gray-900 to-gray-800">
+            <h4 className="text-xl font-semibold text-white mb-2">Colorado</h4>
+            <p className="text-sm sm:text-base text-gray-300">
+              16 Market Square, Denver, 80202
+            </p>
           </div>
         </div>
+
+        {/* Washington DC */}
+        <div className="rounded-lg p-6 shadow-lg border-2 border-gray-800 bg-gradient-to-r from-gray-900 to-gray-800 mt-12">
+          <h4 className="text-xl font-semibold text-white mb-2">Washington, DC</h4>
+          <p className="text-sm sm:text-base text-gray-300">
+            601 Pennsylvania Avenue NW (formerly 1100 Pennsylvania Avenue NW, Washington, DC 20004)
+          </p>
+        </div>
+      </div>
+
+      {/* Kontak */}
+      <div className="text-center mb-16">
+        <h4 className="text-xl sm:text-2xl font-semibold">Contact Us</h4>
+        <p className="text-sm sm:text-base mt-2">For inquiries, please contact us at:</p>
+        <div className="flex justify-center gap-4 items-center mt-4">
+          <img src="/icons/icon-phone.svg" alt="phone" width={24} height={24} />
+          <span className="text-sm sm:text-base">+1 314-744-9126</span>
+        </div>
+      </div>
+
+      {/* Peta */}
+      <h3 className="text-center text-3xl font-semibold mb-8">Find Us</h3>
+      <div className="w-full max-w-screen-md mx-auto h-96 rounded-lg overflow-hidden shadow-lg border-2 border-gray-800 bg-gradient-to-r from-gray-900 to-gray-800">
+        <Map />
       </div>
     </div>
   );

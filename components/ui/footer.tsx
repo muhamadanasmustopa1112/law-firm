@@ -176,7 +176,7 @@ function Footer() {
             </Link>
             <Link
               target="_blank"
-              href="https://www.loker.id/profile/pt-iuris-international-indonesia"
+              href="/carrers"
               className="text-sm lg:text-sm"
             >
               Careers
@@ -191,7 +191,7 @@ function Footer() {
               target="_blank"
               className="text-sm lg:text-sm"
             >
-              IURIS Internasional Consulting Firm
+              IURIS International Consulting Firm
             </Link>
           </div>
           <div className="flex flex-col gap-4">
