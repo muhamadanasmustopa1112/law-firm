@@ -65,7 +65,7 @@ const CareerPage: React.FC = () => {
           </p>
           <div className="flex justify-center space-x-4">
             <a
-              href="/about"
+              href="/about-us"
               className="px-6 py-3 text-lg font-medium text-black bg-white rounded-full shadow-md hover:bg-gray-200 transition duration-300"
             >
               About Us

@@ -11,12 +11,15 @@ export default function Page() {
         <source src="/video/banner-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      
+
+      {/* Black background overlay */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-85 z-0"></div>
+
       <div className="container mx-auto h-full relative z-10">
         <div className="flex flex-col lg:flex-row items-center flex-nowrap h-full justify-center lg:justify-normal">
           <div className="hidden lg:block lg:w-1/2"></div>
           <div className="lg:w-1/2 px-10 lg:px-0 lg:py-10 lg:pr-24">
-            <div className="flex flex-col gap-4 items-start">
+            <div className="flex flex-col gap-4 items-start text-white">
               <p className="text-xl lg:text-3xl font-semibold leading-snug">
                 Unlock the power of legal AI with our insightful content,
                 guiding you towards informed decisions in the ever-evolving

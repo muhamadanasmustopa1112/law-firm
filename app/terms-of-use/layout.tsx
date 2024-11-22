@@ -1,12 +1,12 @@
 import Image from "next/image";
 import React from "react";
-import backgroundImage from "@/public/img/stars.jpg";
+import backgroundImage from "@/public/img/projects.png";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="relative">
+    <div className="overflow-hidden relative">
       {children}
-      <div className="absolute top-0 left-0 w-full h-full aspect-video -z-10 overflow-hidden opacity-25">
+      <div className="absolute bottom-0 w-screen aspect-video -z-10 overflow-hidden opacity-25">
         <Image
           alt="Background Image"
           src={backgroundImage}
@@ -14,10 +14,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           quality={100}
           fill
           sizes="100vw"
-          style={{ objectFit: "cover", objectPosition: "center" }}
+          style={{ objectFit: "cover" }}
         />
       </div>
     </div>
   );
 }
-//

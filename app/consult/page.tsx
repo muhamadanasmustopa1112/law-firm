@@ -4,7 +4,7 @@ const locations = [
   {
     state: "Head Office",
     address:
-      "PT IURIS INTERNATIONAL INDONESIA\nAXA Tower, 36th Floor, Kuningan, Jakarta, Indonesia\n+622150101510\ninfo@iurisinternational.com",
+      "PT IURIS INTERNATIONAL INDONESIA\n\nWashington DC in America\n\n+622150101510\ninfo@iurisinternational.com",
   },
   {
     state: "Arizona",

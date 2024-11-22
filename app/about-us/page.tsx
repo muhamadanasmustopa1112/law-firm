@@ -1,82 +1,95 @@
-"use client";
 import React from "react";
-import dynamic from "next/dynamic";
-import "leaflet/dist/leaflet.css";
-import Link from "next/link";
 
-const Map = dynamic(() => import("../../components/about-us/Map"), { ssr: false });
+const locations = [
+  {
+    state: "Head Office",
+    address:
+      "PT IURIS INTERNATIONAL INDONESIA\n\nWashington DC in America\n\n+622150101510\ninfo@iurisinternational.com",
+  },
+  {
+    state: "Arizona",
+    address: "4600 East Washington, Phoenix, AZ, 85034",
+  },
+  {
+    state: "Utah",
+    address: "3450 Triumph Boulevard Suite 102, Lehi, UT, 84043",
+  },
+  {
+    state: "Colorado",
+    address: "16 Market Square, Denver, 80202",
+  },
+  {
+    state: "Washington DC",
+    address:
+      "Formerly 1100 Pennsylvania avenue NW, Washington DC 20004 currently 601 Pennsylvania",
+  },
+];
+
+const LocationCards = () => {
+  return (
+    <div className="grid grid-cols-1 gap-2">
+      {locations.map((location, index) => (
+        <div
+          key={index}
+          className="border-[0.5px] border-white/40 rounded-lg p-4"
+        >
+          <div className="flex items-center mb-2">
+            <h3 className="text-lg font-semibold text-white">
+              {location.state}
+            </h3>
+          </div>
+          <p className="text-sm text-gray-300 whitespace-pre-line">
+            {location.address}
+          </p>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 export default function Page() {
   return (
-    <div className="min-h-screen w-full bg-black/80 text-white py-16 md:py-20 flex flex-col items-center">
-      {/* Bagian Header */}
-      <div className="container mx-auto px-4 md:px-8 mb-12 text-center">
-        <h2 className="uppercase text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-500">
-          <Link href="/about" passHref>
-            <span className="hover:underline cursor-pointer">
-              IURIS United States Law Firm
+    <div className="min-h-[80vh] bg-black/90 text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8 flex items-center">
+      <div className="max-w-7xl mx-auto w-full">
+        <div className="grid md:grid-cols-2 gap-8 sm:gap-12 items-start lg:items-center">
+          <div className="space-y-6 sm:space-y-8">
+           
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-8 text-white">
+              About Us
+            </h2>
+            <span className="mt-2 block text-sm sm:text-base">
+              We provide personalized legal solutions with a commitment to
+              excellence. Trust us to navigate your legal matters with expert
+              and dedication
             </span>
-          </Link>
-        </h2>
-        <p className="text-lg sm:text-xl mb-6 max-w-3xl mx-auto">
-          We provide personalized legal solutions across the United States. Contact us to discuss your case and find the best resolution.
-        </p>
-      </div>
-
-      {/* Daftar Kantor */}
-      <div className="container mx-auto px-4 md:px-8 mb-16">
-        <h3 className="text-center text-3xl sm:text-4xl font-semibold mb-6">Our Offices (Coming Soon)</h3>
-
-        {/* Daftar kantor dengan styling border modern */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          {/* Arizona */}
-          <div className="rounded-lg p-6 shadow-lg border-2 border-gray-800 bg-gradient-to-r from-gray-900 to-gray-800">
-            <h4 className="text-xl font-semibold text-white mb-2">Arizona</h4>
-            <p className="text-sm sm:text-base text-gray-300">
-              4600 East Washington, Phoenix, AZ, 85034
-            </p>
+            {/* <p className="text-sm sm:text-base leading-relaxed">
+              We appreciate your interest in connecting with us. For individuals
+              of discerning taste and elevated aspirations, we understand the
+              importance of refined communication. Please utilize the form below
+              to convey your inquiries, and rest assured, our dedicated team is
+              committed to providing you with the prompt and discreet attention
+              that befits your status.
+            </p> */}
+            <a 
+              href="https://wa.me/62895327505299" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <button className="bg-white text-black hover:bg-white/80 transition-colors py-3 sm:py-4 px-2 sm:px-8 rounded-full text-sm sm:text-base">
+                Contact Us
+              </button>
+            </a>
           </div>
 
-          {/* Utah */}
-          <div className="rounded-lg p-6 shadow-lg border-2 border-gray-800 bg-gradient-to-r from-gray-900 to-gray-800">
-            <h4 className="text-xl font-semibold text-white mb-2">Utah</h4>
-            <p className="text-sm sm:text-base text-gray-300">
-              3450 Triumph Boulevard Suite 102, Lehi, UT, 84043
-            </p>
-          </div>
-
-          {/* Colorado */}
-          <div className="rounded-lg p-6 shadow-lg border-2 border-gray-800 bg-gradient-to-r from-gray-900 to-gray-800">
-            <h4 className="text-xl font-semibold text-white mb-2">Colorado</h4>
-            <p className="text-sm sm:text-base text-gray-300">
-              16 Market Square, Denver, 80202
-            </p>
+          <div className="space-y-8">
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 sm:p-6 shadow-lg">
+              <h2 className="text-xl sm:text-2xl font-semibold mb-4">
+                Locations
+              </h2>
+              <LocationCards />
+            </div>
           </div>
         </div>
-
-        {/* Washington DC */}
-        <div className="rounded-lg p-6 shadow-lg border-2 border-gray-800 bg-gradient-to-r from-gray-900 to-gray-800 mt-12">
-          <h4 className="text-xl font-semibold text-white mb-2">Washington, DC</h4>
-          <p className="text-sm sm:text-base text-gray-300">
-            601 Pennsylvania Avenue NW (formerly 1100 Pennsylvania Avenue NW, Washington, DC 20004)
-          </p>
-        </div>
-      </div>
-
-      {/* Kontak */}
-      <div className="text-center mb-16">
-        <h4 className="text-xl sm:text-2xl font-semibold">Contact Us</h4>
-        <p className="text-sm sm:text-base mt-2">For inquiries, please contact us at:</p>
-        <div className="flex justify-center gap-4 items-center mt-4">
-          <img src="/icons/icon-phone.svg" alt="phone" width={24} height={24} />
-          <span className="text-sm sm:text-base">+1 314-744-9126</span>
-        </div>
-      </div>
-
-      {/* Peta */}
-      <h3 className="text-center text-3xl font-semibold mb-8">Find Us</h3>
-      <div className="w-full max-w-screen-md mx-auto h-96 rounded-lg overflow-hidden shadow-lg border-2 border-gray-800 bg-gradient-to-r from-gray-900 to-gray-800">
-        <Map />
       </div>
     </div>
   );

@@ -16,7 +16,7 @@ const assets = [
   //   children: <Motorcycles />,
   // },
   {
-    name: "Properties",
+    name: "Assignments",
     path: "properties",
     children: <Properties />,
   },
@@ -58,7 +58,7 @@ export default function Page({ params }: { params: { asset: string } }) {
   return (
     <div className="py-10 lg:py-0 flex flex-col gap-8 justify-center relative z-10 bg-black text-white">
       <h1 className="text-center text-4xl font-semibold">
-        IURIS Assets : Asset Acquisition Division
+        Wholesale real estate investments
       </h1>
       <div className="flex flex-row justify-center gap-4">
         {assets.map((item, idx) => (

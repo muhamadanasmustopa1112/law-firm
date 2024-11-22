@@ -7,7 +7,6 @@ const PropertyListing = (props: {
         name: string;
         floor: string;
         furnishing: string;
-        postedOn: string;
         image: string;
     }
 }) => {
@@ -22,7 +21,6 @@ const PropertyListing = (props: {
                     <div>
                         <p>Floor: {props.item.floor}</p>
                         <p>Furnishing: {props.item.furnishing}</p>
-                        <p>Posted On: {props.item.postedOn}</p>
                     </div>
                 </div>
             </div>

@@ -16,7 +16,7 @@ function MainHome() {
 
   useEffect(() => {
     if (trigger && showSecondComponent) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = "auto"; // Allow full scroll when second component is shown
     } else {
       document.body.style.overflow = "auto";
     }
@@ -52,7 +52,7 @@ function MainHome() {
   const LIST = [
     "Penal Law",
     "Family Law",
-    "Contact Law",
+    "Contract Law",
     "Corporate Law",
     "Blockchain Law",
     "Real Estate Law",
@@ -163,9 +163,9 @@ function MainHome() {
               animate="visible"
               exit="exit"
               variants={bottomEnterVariants}
-              className="w-full md:w-1/2 h-[50vh] md:h-[calc(10*4rem)] overflow-y-auto custom-scrollbar mt-8 md:mt-0"
+              className="w-full md:w-1/2 h-auto mt-8 md:mt-0"
             >
-              <div className="flex flex-col gap-1 h-full">
+              <div className="flex flex-col gap-1 max-h-[50vh] overflow-y-auto custom-scrollbar">
                 {LIST.map((val) => (
                   <span
                     key={val}
