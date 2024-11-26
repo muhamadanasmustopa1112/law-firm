@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 function MainHome() {
   const [trigger, setTrigger] = useState(false);
@@ -121,7 +122,7 @@ function MainHome() {
               <img
                 src="/img/IURIS-Estatua-de-David.png"
                 alt="Statue"
-                className="mx-auto md:absolute md:right-0 md:top-1/2 md:transform md:-translate-y-1/2 h-auto w-full max-w-xs md:max-w-sm lg:max-w-md xl:max-w-[40rem] max-h-[90vh] md:max-h-[85vh]"
+                className="relative  mx-auto md:absolute md:right-0 md:top-1/2 md:transform md:-translate-y-1/2 h-auto w-full max-w-xs md:max-w-sm lg:max-w-md xl:max-w-[41.5rem]"
               />
             </motion.div>
           </motion.div>
@@ -154,9 +155,12 @@ function MainHome() {
               <h1 className="text-5xl md:text-[9rem] italic font-serif leading-tight md:leading-[125px]">
                 Areas <br /> of Law
               </h1>
-              <button className="rounded-full uppercase bg-white text-gray-900 text-center py-2 px-6 md:px-8 text-base md:text-lg font-medium">
+              <Link
+                href="/consult"
+                className="rounded-full uppercase bg-white text-gray-900 text-center py-2 px-6 md:px-8 text-base md:text-lg font-medium"
+              >
                 Consult
-              </button>
+              </Link>
             </motion.div>
             <motion.div
               initial="hidden"

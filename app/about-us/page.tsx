@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const locations = [
@@ -70,15 +71,14 @@ export default function Page() {
               committed to providing you with the prompt and discreet attention
               that befits your status.
             </p> */}
-            <a 
-              href="https://wa.me/62895327505299" 
-              target="_blank" 
+           <Link 
+              href="/consult" 
               rel="noopener noreferrer"
             >
-              <button className="bg-white text-black hover:bg-white/80 transition-colors py-3 sm:py-4 px-2 sm:px-8 rounded-full text-sm sm:text-base">
+              <button className="bg-white text-black hover:bg-white/80 transition-colors py-3 sm:py-4 px-2 sm:px-8 rounded-full text-sm sm:text-base mt-5">
                 Contact Us
               </button>
-            </a>
+            </Link>
           </div>
 
           <div className="space-y-8">

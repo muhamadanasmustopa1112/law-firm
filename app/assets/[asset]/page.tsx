@@ -60,6 +60,9 @@ export default function Page({ params }: { params: { asset: string } }) {
       <h1 className="text-center text-4xl font-semibold">
         Wholesale real estate investments
       </h1>
+      <p className="text-lg text-gray-300 px-20">
+        Welcome to our comprehensive platform for exploring diverse investment opportunities. Whether you're interested in real estate properties, vehicles, or other valuable assets, our curated selection is designed to meet your needs. Navigate through the options to discover the perfect match for your goals, and take the first step toward smart, profitable investments. Let us guide you to success in the world of wholesale and high-value assets.
+      </p>
       <div className="flex flex-row justify-center gap-4">
         {assets.map((item, idx) => (
           <Link

@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import sourceSansPro from "./sourceSansPro";
 
 function Footer() {
   const [isLinksOpen, setIsLinksOpen] = useState(false);
@@ -12,7 +13,10 @@ function Footer() {
 
   return (
     <footer
-      className={`py-8 lg:py-24 px-4 md:px-24 flex flex-col md:flex-row justify-between gap-8 md:gap-16 bg-black border-t border-white text-white`}
+      className={
+        sourceSansPro.className +
+        " py-8 lg:py-24 px-4 md:px-24 flex flex-col md:flex-row justify-between gap-8 md:gap-16 bg-black border-t border-white text-white"
+      }
     >
       <div className="flex flex-col gap-8 w-full md:w-1/2">
         <div className="flex flex-col items-center md:items-start gap-8">
@@ -167,38 +171,41 @@ function Footer() {
           }`}
         >
           <div className="flex flex-col gap-4">
+          <p className="text-xl lg:text-2xl mb-4"><b>Company</b></p>
             <Link
               target="_blank"
               href="/whitepaper.pdf"
-              className="text-sm lg:text-sm"
+              className="text-lg"
             >
               Disclaimer
             </Link>
             <Link
               target="_blank"
               href="/carrers"
-              className="text-sm lg:text-sm"
+              className="text-lg"
             >
               Careers
             </Link>
           </div>
           <div className="flex flex-col gap-4">
-            <Link href="/privacy-policy" className="text-sm lg:text-sm">
+            <p className="text-xl lg:text-2xl mb-4"><b>Privacy</b></p>
+            <Link href="/privacy-policy" className="text-lg">
               Privacy Policy
             </Link>
             <Link
               href="https://iurisinternational.com"
               target="_blank"
-              className="text-sm lg:text-sm"
+              className="text-lg"
             >
               IURIS International Consulting Firm
             </Link>
           </div>
           <div className="flex flex-col gap-4">
-            <Link href="/terms-of-use" className="text-sm lg:text-sm">
+            <p className="text-xl lg:text-2xl mb-4"><b>Terms Of Us</b></p>
+            <Link href="/terms-of-use" className="text-lg">
               Terms Of Use
             </Link>
-            <Link href="/about-us" className="text-sm lg:text-sm">
+            <Link href="/about-us" className="text-lg">
               IURIS United States Law Firm
             </Link>
           </div>

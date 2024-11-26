@@ -51,7 +51,7 @@ const CareerPage: React.FC = () => {
         </p>
 
         {/* Career Listings */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4 justify-center px-0 lg:px-16 py-0 lg:py-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mt-4 justify-center px-0 lg:px-16 py-0 lg:py-8">
           {careerListings.map((item, index) => (
             <CareerListing item={item} key={index} />
           ))}
@@ -65,13 +65,7 @@ const CareerPage: React.FC = () => {
           </p>
           <div className="flex justify-center space-x-4">
             <a
-              href="/about-us"
-              className="px-6 py-3 text-lg font-medium text-black bg-white rounded-full shadow-md hover:bg-gray-200 transition duration-300"
-            >
-              About Us
-            </a>
-            <a
-              href="/contact"
+              href="/consult"
               className="px-6 py-3 text-lg font-medium text-black bg-white rounded-full shadow-md hover:bg-gray-200 transition duration-300"
             >
               Contact Us

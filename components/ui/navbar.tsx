@@ -11,7 +11,7 @@ const links = [
   { name: "legal ai", path: "/legal-ai" },
   { name: "assets", path: "/assets/properties" },
   { name: "insight", path: "/insight" },
-  { name: "consult", path: "/consult" },
+  { name: "about us", path: "/about-us" },
   { name: "careers", path: "/carrers" },
 ];
 
@@ -72,10 +72,10 @@ export default function Navbar() {
               ))}
             </div>
             <Link
-              href="/about-us"
+              href="/consult"
               className="bg-white uppercase text-sm text-black rounded-full py-4 px-6 hover:brightness-90 transition-all"
             >
-              About Us
+               Consult
             </Link>
           </>
         )}
@@ -104,11 +104,11 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="/about-us"
+            href="/consult"
             className="bg-white uppercase text-sm text-black rounded-full py-4 px-6 hover:brightness-90 transition-all w-full text-center"
             onClick={() => setIsMenuOpen(false)}
           >
-            About Us
+            Consult
           </Link>
         </div>
       )}
