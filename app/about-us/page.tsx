@@ -1,92 +1,54 @@
 import Link from "next/link";
 import React from "react";
 
-const locations = [
-  {
-    state: "Head Office",
-    address:
-      "PT IURIS INTERNATIONAL INDONESIA\n\nWashington DC in America\n\n+622150101510\ninfo@iurisinternational.com",
-  },
-  {
-    state: "Arizona",
-    address: "4600 East Washington, Phoenix, AZ, 85034",
-  },
-  {
-    state: "Utah",
-    address: "3450 Triumph Boulevard Suite 102, Lehi, UT, 84043",
-  },
-  {
-    state: "Colorado",
-    address: "16 Market Square, Denver, 80202",
-  },
-  {
-    state: "Washington DC",
-    address:
-      "Formerly 1100 Pennsylvania avenue NW, Washington DC 20004 currently 601 Pennsylvania",
-  },
-];
-
-const LocationCards = () => {
-  return (
-    <div className="grid grid-cols-1 gap-2">
-      {locations.map((location, index) => (
-        <div
-          key={index}
-          className="border-[0.5px] border-white/40 rounded-lg p-4"
-        >
-          <div className="flex items-center mb-2">
-            <h3 className="text-lg font-semibold text-white">
-              {location.state}
-            </h3>
-          </div>
-          <p className="text-sm text-gray-300 whitespace-pre-line">
-            {location.address}
-          </p>
-        </div>
-      ))}
-    </div>
-  );
-};
-
 export default function Page() {
   return (
-    <div className="min-h-[80vh] bg-black/90 text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8 flex items-center">
-      <div className="max-w-7xl mx-auto w-full">
-        <div className="grid md:grid-cols-2 gap-8 sm:gap-12 items-start lg:items-center">
-          <div className="space-y-6 sm:space-y-8">
-           
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-8 text-white">
+    <div className="min-h-screen w-full bg-black/50 text-white py-8 px-10 md:py-0 flex items-center">
+      <div className="container mx-auto px-4 md:px-0">
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between gap-8 md:gap-0">
+          <div className="w-full md:w-1/2 text-center md:text-left px-10">
+            <h2 className="uppercase text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
               About Us
             </h2>
             <span className="mt-2 block text-sm sm:text-base">
-              We provide personalized legal solutions with a commitment to
-              excellence. Trust us to navigate your legal matters with expert
-              and dedication
+            IURIS is a boutique law firm dedicated to helping individuals and businesses navigate life’s legal challenges with confidence. As a new, forward-thinking firm, we provide personalized support in areas like family, real estate, and contract law, while also offering expertise in emerging fields like Blockchain and technology. Whether you’re planning for the future, resolving a dispute, or exploring new opportunities, IURIS is here to provide clear guidance and innovative solutions tailored to your needs.
             </span>
-            {/* <p className="text-sm sm:text-base leading-relaxed">
-              We appreciate your interest in connecting with us. For individuals
-              of discerning taste and elevated aspirations, we understand the
-              importance of refined communication. Please utilize the form below
-              to convey your inquiries, and rest assured, our dedicated team is
-              committed to providing you with the prompt and discreet attention
-              that befits your status.
-            </p> */}
-           <Link 
-              href="/consult" 
-              rel="noopener noreferrer"
-            >
-              <button className="bg-white text-black hover:bg-white/80 transition-colors py-3 sm:py-4 px-2 sm:px-8 rounded-full text-sm sm:text-base mt-5">
-                Contact Us
-              </button>
-            </Link>
           </div>
-
-          <div className="space-y-8">
-            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 sm:p-6 shadow-lg">
-              <h2 className="text-xl sm:text-2xl font-semibold mb-4">
-                Locations
-              </h2>
-              <LocationCards />
+          <div className="w-full md:w-1/2 flex justify-center md:justify-start px-10">
+            <div className="flex flex-col gap-6 items-center md:items-start">
+              <div className="flex gap-2 items-center">
+                <span>
+                  <img
+                    src="/icons/icon-email.svg"
+                    alt="email"
+                    width={24}
+                    height={24}
+                  />
+                </span>
+                <span className="text-sm sm:text-base">info@iuris.world</span>
+              </div>
+              <div className="flex gap-2 items-center">
+                <span>
+                  <img
+                    src="/icons/icon-phone.svg"
+                    alt="phone"
+                    width={24}
+                    height={24}
+                  />
+                </span>
+                <span className="text-sm sm:text-base">+13147449126</span>
+              </div>
+              <div className="flex flex-col gap-2 items-center md:items-start text-center md:text-left">
+                <span className="text-sm sm:text-base">
+                How Can We Help?
+                Let IURIS simplify the legal process for you. Contact us today for personalized advice and support—your journey to peace of mind starts here.
+                </span>
+                <Link href="/consult" rel="noopener noreferrer">
+                  <button className="bg-white text-black hover:bg-white/80 transition-colors py-3 sm:py-4 px-2 sm:px-8 rounded-full text-sm sm:text-base mt-5">
+                    Contact Us
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

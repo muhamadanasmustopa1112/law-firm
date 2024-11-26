@@ -29,7 +29,7 @@ function Footer() {
               height={80}
             />
           </div>
-          {/* <div className="flex flex-wrap gap-4 text-xl justify-center md:justify-start">
+          <div className="flex flex-wrap gap-4 text-xl justify-center md:justify-start">
             <Link
               target="_blank"
               href="https://www.instagram.com/iurisinternational"
@@ -149,7 +149,7 @@ function Footer() {
                 <path d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"></path>
               </svg>
             </Link>
-          </div> */}
+          </div>
           <p className="text-sm text-center md:text-left leading-relaxed">
             ©2024 IURIS LLC. PT IURIS INTERNATIONAL INDONESIA.
             <br />
@@ -173,14 +173,12 @@ function Footer() {
           <div className="flex flex-col gap-4">
           <p className="text-xl lg:text-2xl mb-4"><b>Company</b></p>
             <Link
-              target="_blank"
               href="/whitepaper.pdf"
               className="text-lg"
             >
-              Disclaimer
+              Whitepaper
             </Link>
             <Link
-              target="_blank"
               href="/carrers"
               className="text-lg"
             >
@@ -188,9 +186,27 @@ function Footer() {
             </Link>
           </div>
           <div className="flex flex-col gap-4">
-            <p className="text-xl lg:text-2xl mb-4"><b>Privacy</b></p>
-            <Link href="/privacy-policy" className="text-lg">
-              Privacy Policy
+            <p className="text-xl lg:text-2xl mb-4"><b>Site Map</b></p>
+            <Link href="/consult" className="text-lg">
+              Contact Us
+            </Link>
+            <Link href="/insight" className="text-lg">
+              Legal Blog & Insights
+            </Link>
+            <Link href="/" className="text-lg">
+              Our Practice Areas
+            </Link>
+            <Link href="/consult" className="text-lg">
+              Industries We Serve 
+            </Link>
+            <Link href="/consult" className="text-lg">
+              Schedule a Consultation
+            </Link>
+            <Link href="/insight" className="text-lg">
+              Client Resources & FAQs
+            </Link>
+            <Link href="/insight" className="text-lg">
+              Articles & Guides
             </Link>
             <Link
               href="https://iurisinternational.com"
@@ -201,9 +217,15 @@ function Footer() {
             </Link>
           </div>
           <div className="flex flex-col gap-4">
-            <p className="text-xl lg:text-2xl mb-4"><b>Terms Of Us</b></p>
+            <p className="text-xl lg:text-2xl mb-4"><b>Privacy</b></p>
             <Link href="/terms-of-use" className="text-lg">
               Terms Of Use
+            </Link>
+            <Link href="/privacy-policy" className="text-lg">
+              Privacy Policy
+            </Link>
+            <Link target="_blank" href="/disclaimer.pdf" className="text-lg">
+              Disclaimer
             </Link>
             <Link href="/about-us" className="text-lg">
               IURIS United States Law Firm

@@ -61,7 +61,7 @@ export default function Page({ params }: { params: { asset: string } }) {
         Wholesale real estate investments
       </h1>
       <p className="text-lg text-gray-300 px-20">
-        Welcome to our comprehensive platform for exploring diverse investment opportunities. Whether you're interested in real estate properties, vehicles, or other valuable assets, our curated selection is designed to meet your needs. Navigate through the options to discover the perfect match for your goals, and take the first step toward smart, profitable investments. Let us guide you to success in the world of wholesale and high-value assets.
+        At IURIS, we specialize in wholesale real estate services tailored for investors seeking profitable off-market properties. Our team works closely with clients to identify high-potential deals, offering exclusive access to properties that are not publicly listed. In addition to sourcing these unique opportunities, we provide comprehensive support across all aspects of real estate transactions, including title services, transactional law, and strategic financial positioning. Our goal is to help investors maximize returns while minimizing risk, ensuring each deal is structured for success.
       </p>
       <div className="flex flex-row justify-center gap-4">
         {assets.map((item, idx) => (
@@ -80,6 +80,12 @@ export default function Page({ params }: { params: { asset: string } }) {
         ))}
       </div>
       {data?.children}
+      <h1 className="text-center text-4xl font-semibold mt-10">
+        Comprehensive Legal Services for the Real Estate Industry
+      </h1>
+      <p className="text-lg text-gray-300 px-20 mb-10">
+        URIS offers a full spectrum of legal services for professionals in the real estate industry, including developers, architects, engineers, construction companies, brokers, agents, and consumers. Whether you're navigating complex development projects, negotiating contracts, or addressing regulatory challenges, our experienced team provides practical legal solutions tailored to the needs of each client. From zoning and permitting to dispute resolution and construction law, we ensure that every aspect of your real estate venture is legally sound and strategically positioned for growth.
+      </p>
     </div>
   );
 }

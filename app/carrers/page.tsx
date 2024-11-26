@@ -39,6 +39,16 @@ const CareerPage: React.FC = () => {
       description:
         "We are seeking an Executive Assistant who is highly organized and able to assist with the coordination of the executive team's activities.",
     },
+    {
+      title: "Real Estate Specialist",
+      description:
+        "As a Real Estate Specialist, you will be responsible for managing real estate transactions, providing expert advice on property investments, and ensuring compliance with real estate laws and regulations. ",
+    },
+    {
+      title: "Legal Assistant",
+      description:
+        "As a Legal Assistant, you will provide crucial support to the legal team by managing administrative tasks, preparing legal documents, and assisting with research on legal matters. Your responsibilities will include drafting contracts, filing legal paperwork, scheduling meetings, and maintaining case files. You will also liaise with clients, ensuring effective communication and timely updates on legal matters.",
+    },
   ];
 
   return (
@@ -51,7 +61,7 @@ const CareerPage: React.FC = () => {
         </p>
 
         {/* Career Listings */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mt-4 justify-center px-0 lg:px-16 py-0 lg:py-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-6 mt-4 justify-center px-0 lg:px-16 py-0 lg:py-8">
           {careerListings.map((item, index) => (
             <CareerListing item={item} key={index} />
           ))}
