@@ -16,7 +16,7 @@ const locations = [
   {
     state: "Washington DC",
     address:
-      "Formerly 1100 Pennsylvania avenue NW, Washington DC 20004 currently 601 Pennsylvania",
+      "Formerly : 1100 Pennsylvania avenue NW, Washington DC 20004\n Currently : 601 Pennsylvania Washington DC 20004",
   },
 ];
 

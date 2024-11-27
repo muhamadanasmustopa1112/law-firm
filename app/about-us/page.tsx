@@ -11,7 +11,7 @@ export default function Page() {
               About Us
             </h2>
             <span className="mt-2 block text-sm sm:text-base">
-            IURIS is a boutique law firm dedicated to helping individuals and businesses navigate life’s legal challenges with confidence. As a new, forward-thinking firm, we provide personalized support in areas like family, real estate, and contract law, while also offering expertise in emerging fields like Blockchain and technology. Whether you’re planning for the future, resolving a dispute, or exploring new opportunities, IURIS is here to provide clear guidance and innovative solutions tailored to your needs.
+            IURIS is a boutique law firm dedicated to helping individuals and businesses navigate life’s legal challenges with confidence. we provide personalized support in areas like family, real estate, and contract law, while also offering expertise in emerging fields like Blockchain and technology. Whether you’re planning for the future, resolving a dispute, or exploring new opportunities, IURIS is here to provide clear guidance and innovative solutions tailored to your needs.
             </span>
           </div>
           <div className="w-full md:w-1/2 flex justify-center md:justify-start px-10">
@@ -25,7 +25,7 @@ export default function Page() {
                     height={24}
                   />
                 </span>
-                <span className="text-sm sm:text-base">info@iuris.world</span>
+                <span className="text-sm sm:text-base">support@iurislaw.co</span>
               </div>
               <div className="flex gap-2 items-center">
                 <span>
@@ -36,7 +36,7 @@ export default function Page() {
                     height={24}
                   />
                 </span>
-                <span className="text-sm sm:text-base">+13147449126</span>
+                <span className="text-sm sm:text-base">+877-721-4433</span>
               </div>
               <div className="flex flex-col gap-2 items-center md:items-start text-center md:text-left">
                 <span className="text-sm sm:text-base">

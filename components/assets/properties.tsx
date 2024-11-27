@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import PropertyListing from "./property/listing";
 
+
 const Properties = () => {
   const propertyListing = [
     {
@@ -43,22 +44,9 @@ const Properties = () => {
   ];
   return (
     <>
-      <div className='w-screen bg-[url("/img/property.jpg")] aspect-[5/1] bg-no-repeat bg-bottom bg-cover relative -left-8'>
+      {/* <div className='w-screen bg-[url("/img/property.jpg")] aspect-[5/1] bg-no-repeat bg-bottom bg-cover relative -left-8'>
         <div className='max-sm:hidden absolute -z-10 h-[300%] w-auto aspect-square top-1/2 -translate-y-1/2 right-0 before:relative before:-z-10 before:content-[""] before:block before:bg-white before:h-[90%] before:w-[90%] before:rounded-full before:blur-3xl before:bg-opacity-10 before:-right-2/3 before:top-1/2 before:-translate-y-1/2'></div>
       </div>
-      <h2 className='font-semibold text-4xl text-center relative before:content-[""] before:w-36 before:absolute before:-bottom-4 before:h-[2px] before:bg-white before:left-1/2 before:-translate-x-1/2'>
-        Under Contract
-      </h2>
-      <div className="grid grid-cols-3 gap-6 mt-4 justify-center px-0 lg:px-16 py-0 lg:py-8">
-        {propertyListing.map((item) => (
-          <PropertyListing item={item} key={item.name} />
-        ))}
-      </div>
-      <h2 className='font-semibold text-4xl text-center relative before:content-[""] before:w-36 before:absolute before:-bottom-4 before:h-[2px] before:bg-white before:left-1/2 before:-translate-x-1/2'>
-        <span className="font-normal text-base">Our Aesthetic </span>
-        <br />
-        Design
-      </h2>
       <div className="flex flex-row gap-6 border border-white rounded-tl-[1.875rem] rounded-br-[1.875rem] overflow-hidden mt-4 mx-0 lg:mx-16">
         <div className="w-[30rem]">
           <Image
@@ -79,7 +67,16 @@ const Properties = () => {
             showcasing a commitment to excellence in every project.
           </p>
         </div>
+      </div> */}
+      <h2 className='font-semibold text-4xl text-center relative before:content-[""] before:w-36 before:absolute before:-bottom-4 before:h-[2px] before:bg-white before:left-1/2 before:-translate-x-1/2'>
+        Under Contract
+      </h2>
+      <div className="grid grid-cols-3 gap-6 mt-4 justify-center px-0 lg:px-16 py-0 lg:py-8">
+        {propertyListing.map((item) => (
+          <PropertyListing item={item} key={item.name} />
+        ))}
       </div>
+      
     </>
   );
 };
